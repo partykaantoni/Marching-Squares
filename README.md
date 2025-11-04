@@ -15,7 +15,7 @@ Based on the combination of these values, it is determined which edges of a give
 In the implementation:
 1. A grid of points with random values of 0 and 1 is generated.  
 2. Each set of four adjacent points forms a `Square` structure.  
-3. For each square, its state (`all`) is calculated based on the sum and distribution of the corner values.  
+3. For each square, its state is calculated based on the sum and distribution of the corner values.  
 4. The `segmentSquare()` function creates a lookup table that specifies the interpolation method for each configuration.  
 5. Based on this, the resulting “screen” is built, which represents the contours in the form of ASCII characters.
 
