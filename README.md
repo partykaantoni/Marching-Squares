@@ -1,24 +1,24 @@
-# Implementacja algorytmu Marching Squares w języku C
+# Implementation of the Marching Squares algorithm in C
 
-Projekt stanowi implementację algorytmu Marching Squares w języku C.  
-Algorytm służy do generowania konturów w dwuwymiarowej siatce punktów na podstawie wartości skalarnych.  
-Został zrealizowany w formie programu konsolowego. Wykorzystującego wyłącznie standardowe funkcje wejścia/wyjścia języka C.
+This project is an implementation of the Marching Squares algorithm in C.  
+The algorithm is used to generate contours in a two-dimensional grid of points based on scalar values.  
+It was implemented as a console program using only standard C input/output functions.
 
 ---
 
-## Opis działania
+## Description of operation
 
-Algorytm Marching Squares analizuje kolejne kwadraty złożone z czterech sąsiednich punktów w siatce.  
-Każdy z tych punktów posiada wartość binarną.  
-Na podstawie kombinacji tych wartości określa się, przez które krawędzie danego kwadratu przebiega linia konturu.
+The Marching Squares algorithm analyzes successive squares composed of four adjacent points in the grid.  
+Each of these points has a binary value.  
+Based on the combination of these values, it is determined which edges of a given square are crossed by the contour line.
 
-W implementacji:
-1. Generowana jest siatka punktów o losowych wartościach 0 i 1.  
-2. Każdy zestaw czterech sąsiadujących punktów tworzy strukturę `Square`.  
-3. Dla każdego kwadratu obliczany jest jego stan (`all`) na podstawie sumy i rozmieszczenia wartości narożników.  
-4. Funkcja `segmentSquare()` tworzy tablicę odwzorowania (lookup table), określającą sposób interpolacji dla każdej konfiguracji.  
-5. Na tej podstawie budowany jest wynikowy „ekran” (`screen`), który przedstawia przebieg konturów w postaci znaków ASCII.
+In the implementation:
+1. A grid of points with random values of 0 and 1 is generated.  
+2. Each set of four adjacent points forms a `Square` structure.  
+3. For each square, its state (`all`) is calculated based on the sum and distribution of the corner values.  
+4. The `segmentSquare()` function creates a lookup table that specifies the interpolation method for each configuration.  
+5. Based on this, the resulting “screen” is built, which represents the contours in the form of ASCII characters.
 
-Program wypisuje na konsolę:
-- siatkę punktów wejściowych,
-- wynikową mapę konturów (w postaci znaków `#` i spacji).
+The program prints the following to the console:
+- a grid of input points,
+- the resulting contour map.
